@@ -1,0 +1,91 @@
+# Mothership theme - personalization
+
+## based on Dank Neon
+## https://dankneon.com/
+
+### 1 - color scheme for gnome terminal - mayccoll/gogh
+### https://github.com/Mayccoll/Gogh
+
+https://github.com/Mayccoll/Gogh
+#####from linux
+bash -c  "$(wget -qO- https://git.io/vQgMr)"
+#####or from mac
+#####bash -c  "$(curl -sLo- https://git.io/vQgMr)"
+
+(14) Bim
+
+### 2 - color scheme for xfce terminal
+### https://github.com/netzverweigerer/xfce4-terminal-colorschemes
+
+Bim
+
+darkpastels
+eighties
+shapeshifter
+Solarized
+Solarized (Dark)
+Solarized (Light)
+visi
+#---> develop my own?
+
+### 3 - color scheme for vi
+### dank neon available?
+### https://dankneon.com/vim/
+export VIM_COLOR_URI=https://raw.githubusercontent.com/DankNeon/vim/master/colors/dank-neon.vim
+export VIMRC=~/.vimrc
+mkdir -p ~/.vim/colors/
+cd ~/.vim/colors/
+curl -O ${VIM_COLOR_URI}
+cp ${VIMRC} ${VIMRC}.bak
+tee ${VIMRC} <<-EOF
+syntax on
+filetype plugin indent on
+colorscheme dank-neon
+EOF
+
+#4 - iterm
+#download and copy to the right location
+export LOCATION=~/.vim/colors/
+mkdir -p $LOCATION
+curl -o $LOCATION https://raw.githubusercontent.com/DankNeon/iterm/master/dank_neon.itermcolors
+
+#5 - VSCode
+#https://github.com/DankNeon/vscode/blob/master/vsc-extension-quickstart.md
+git clone https://github.com/DankNeon/vscode
+#package.json - this is the manifest file that defines the location of the theme file. and specifies the base theme of the theme.
+#themes/Dank Neon-color-theme.json - the color theme definition file.
+
+
+#6 - Sublime Text
+https://raw.githubusercontent.com/DankNeon/sublime/master/Dank_Neon.tmTheme
+
+
+#7 - xfce theme
+Axiom?
+
+
+#8 - terminal font
+#inconsolata
+apt-get install -y fonts-inconsolata
+dpkg-reconfigure fontconfig-config
+fc-list | grep onsol
+
+#osx
+#brew tap homebrew/cask-fonts     
+#brew cask install font-inconsolata
+
+#monaco
+#!/bin/bash
+#script extraido de: http://paulocassiano.wordpress.com/2008/08/29/deixando-o-gedit-com-a-cara-do-textmate/
+#tip for better "resolution" here: http://blog.siverti.com.br/2008/05/22/fonte-monaco-no-ubuntugedit/
+cd /usr/share/fonts/truetype/
+#TODO: put validation if folder already exists
+sudo mkdir ttf-monaco
+cd ttf-monaco/
+sudo wget http://www.gringod.com/wp-upload/software/Fonts/Monaco_Linux.ttf
+#create an index of X font files in a directory
+sudo mkfontdir
+#go to parent folder /usr/share/fonts/truetype
+cd ..
+fc-cache
+
