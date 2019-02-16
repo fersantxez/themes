@@ -21,8 +21,8 @@ export BASH_IT_THEME='bobby'
 #Dracula
 DRACULA_TERMINAL_URI=https://gist.githubusercontent.com/molotovbliss/42e6c1ae54a5922ba720338e5452c2d0/raw/c988497600a55c1a401a0d90834d824d3be6c38a/terminalrc
 
-darkpastels
-eighties
+greybird
+
 shapeshifter
 Solarized
 Solarized (Dark)
@@ -30,7 +30,6 @@ Solarized (Light)
 #---> develop my own dankneon?
 
 ### 3 - color scheme for vi
-### dank neon available?
 ### https://dankneon.com/vim/
 export VIM_COLOR_URI=https://raw.githubusercontent.com/DankNeon/vim/master/colors/dank-neon.vim
 export VIMRC=~/.vimrc
@@ -46,12 +45,14 @@ EOF
 
 #4 - iterm
 #download and copy to the right location
-export LOCATION=~/.vim/colors/
+export LOCATION=~/.themes
 mkdir -p $LOCATION
 curl -o $LOCATION https://raw.githubusercontent.com/DankNeon/iterm/master/dank_neon.itermcolors
 
 #5 - VSCode
 #https://github.com/DankNeon/vscode/blob/master/vsc-extension-quickstart.md
+export LOCATION=~/.themes
+mkdir -p $LOCATION
 git clone https://github.com/DankNeon/vscode
 #package.json - this is the manifest file that defines the location of the theme file. and specifies the base theme of the theme.
 #themes/Dank Neon-color-theme.json - the color theme definition file.
@@ -69,8 +70,8 @@ cd /usr/share/themes
 https://www.opendesktop.org/p/1151531/startdownload?file_id=1471479604&file_name=dots-theme.zip&file_type=application/zip&file_size=51899"
 
 
-
 #8 - terminal font
+
 #inconsolata
 apt-get install -y fonts-inconsolata
 dpkg-reconfigure fontconfig-config
