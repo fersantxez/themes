@@ -1,23 +1,25 @@
-# Mothership theme - personalization
+# Themes - personalization
 
 ## based on Dank Neon
 ## https://dankneon.com/
 
-### 1 - color scheme for gnome terminal - mayccoll/gogh
-### https://github.com/Mayccoll/Gogh
+### 1 - bashit
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
+~/.bash_it/install.sh
 
-https://github.com/Mayccoll/Gogh
-#####from linux
-bash -c  "$(wget -qO- https://git.io/vQgMr)"
-#####or from mac
-#####bash -c  "$(curl -sLo- https://git.io/vQgMr)"
+#choose themes in ~/.bash_profile or bashrc
+#user: 
+export BASH_IT_THEME='zork'
+#root
+export BASH_IT_THEME='bobby'
 
-(14) Bim
+
 
 ### 2 - color scheme for xfce terminal
 ### https://github.com/netzverweigerer/xfce4-terminal-colorschemes
 
-Bim
+#Dracula
+DRACULA_TERMINAL_URI=https://gist.githubusercontent.com/molotovbliss/42e6c1ae54a5922ba720338e5452c2d0/raw/c988497600a55c1a401a0d90834d824d3be6c38a/terminalrc
 
 darkpastels
 eighties
@@ -25,8 +27,7 @@ shapeshifter
 Solarized
 Solarized (Dark)
 Solarized (Light)
-visi
-#---> develop my own?
+#---> develop my own dankneon?
 
 ### 3 - color scheme for vi
 ### dank neon available?
@@ -61,7 +62,12 @@ https://raw.githubusercontent.com/DankNeon/sublime/master/Dank_Neon.tmTheme
 
 
 #7 - xfce theme
-Axiom?
+#Axiom?
+
+#* Dots Theme https://www.opendesktop.org/s/XFCE/p/1151531/
+cd /usr/share/themes
+https://www.opendesktop.org/p/1151531/startdownload?file_id=1471479604&file_name=dots-theme.zip&file_type=application/zip&file_size=51899"
+
 
 
 #8 - terminal font
@@ -69,10 +75,16 @@ Axiom?
 apt-get install -y fonts-inconsolata
 dpkg-reconfigure fontconfig-config
 fc-list | grep onsol
-
 #osx
 #brew tap homebrew/cask-fonts     
 #brew cask install font-inconsolata
+
+#adobe source pro
+git clone --depth 1 --branch release https://github.com/adobe-fonts/source-code-pro.git ~/.fonts/adobe-fonts/source-code-pro
+fc-cache -f -v ~/.fonts/adobe-fonts/source-code-pro
+
+#FIRA code
+#https://github.com/tonsky/FiraCode
 
 #monaco
 #!/bin/bash
@@ -88,4 +100,14 @@ sudo mkfontdir
 #go to parent folder /usr/share/fonts/truetype
 cd ..
 fc-cache
+
+#9 System font
+Lato Light 10
+
+#10 Window Manager font
+Lato Light 10
+
+#11 Icons
+#suru plus - install as root
+wget -qO- https://raw.githubusercontent.com/gusbemacbe/suru-plus/master/install.sh | sh
 
