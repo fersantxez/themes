@@ -108,6 +108,17 @@ Lato Light 10
 #10 Window Manager font
 Lato Light 10
 
+#11 Work fonts
+Default: Sans Regular 9
+Desktop: Noto Sans Regular 10
+Document: Sans Regular 11
+Monospace: Inconsolata Medium 11
+Window Title Font: Sans Bold 10
+settings:
+hinting: slight
+Antialiasing: Rgba
+RBGA order:  RGB
+
 #11 Icons
 #suru plus - install as root
 wget -qO- https://raw.githubusercontent.com/gusbemacbe/suru-plus/master/install.sh | sh
